@@ -1,0 +1,15 @@
+# Chặn các file thực thi không có đuôi (đặc trưng của Linux/WSL)
+app
+temp_app
+main
+
+# Chặn toàn bộ file thực thi của Windows
+*.exe
+
+# Chặn các file rác sinh ra trong quá trình build
+*.o
+*.obj
+*.out
+
+# Chặn các thư mục cấu hình cá nhân của VS Code (tùy chọn)
+.vscode/

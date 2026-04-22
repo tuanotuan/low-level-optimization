@@ -13,7 +13,21 @@ struct PaddedStruct{
 // => struct nay 8 bytes
 // meo toi uu: khai bao bien trong cau truc theo thu
 // tu giam dan kich thuoc byte
+//===
+int returnOne() {
+    std::cout << "1\n";
+    return 1;
+}
+int returnTwo() {
+    std::cout << "2\n";
+    return 2;
+}
+void dummyFunction(int a, int b) {
+    std::cout << "dummyFunction called\n";
+}
 int main() {
     std::cout << sizeof(PaddedStruct) << "\n";
+    // unspecified behavior: co the in ra 2 1 hoac 1 2
+    dummyFunction(returnOne(), returnTwo());
     return 0;
 }

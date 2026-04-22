@@ -13,3 +13,5 @@ main
 
 # Chặn các thư mục cấu hình cá nhân của VS Code (tùy chọn)
 .vscode/
+
+waste.txt

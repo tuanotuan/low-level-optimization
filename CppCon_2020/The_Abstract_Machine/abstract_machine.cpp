@@ -25,9 +25,21 @@ int returnTwo() {
 void dummyFunction(int a, int b) {
     std::cout << "dummyFunction called\n";
 }
+//===
+int share_var = 0;
+thread_local int personal_var = 0;
+void doSomething() {
+    share_var++;
+    personal_var++;
+    std::cout << "share_var: " << share_var << ", personal_var: " << personal_var << "\n";
+}
 int main() {
     std::cout << sizeof(PaddedStruct) << "\n";
     // unspecified behavior: co the in ra 2 1 hoac 1 2
     dummyFunction(returnOne(), returnTwo());
+    std::thread t1(doSomething);
+    std::thread t2(doSomething);
+    t1.join();
+    t2.join();
     return 0;
 }

@@ -39,7 +39,9 @@ int main() {
     dummyFunction(returnOne(), returnTwo());
     std::thread t1(doSomething);
     std::thread t2(doSomething);
+    // phai join thread truoc khi main ket thuc de ko bi loi
     t1.join();
     t2.join();
+    std::cout << "share_var: " << share_var << ", personal_var: " << personal_var << "\n";
     return 0;
 }

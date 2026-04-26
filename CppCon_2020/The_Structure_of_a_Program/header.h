@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
-void printVersion();
+inline void printVersion(){
+    std::cout << "Version 1.0\n";
+}
 /*
 void calculateSomething() {
     std::cout << "[Loi] Ham nay se gay ra Multiple Definition!\n";

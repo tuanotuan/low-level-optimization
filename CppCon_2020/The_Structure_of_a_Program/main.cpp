@@ -1,5 +1,6 @@
 #include "header.h"
 int main(){
-    printVersion();
+    User user;
+    user.printName();
     return 0;
 }
